@@ -4,10 +4,10 @@
    <script src="ambrosiaJava.js"> </script>
   <head>
     <meta charset="utf-8">
-    
+
     <link rel="stylesheet" type="text/css" href="box.css" />
     <link rel="stylesheet" type="text/css" href="boxstyle.css" />
-    
+
 
     <title>Ambrosia Pantry</title>
 
@@ -24,46 +24,62 @@
     </div>
 
   </head>
-  <body>
-    <div class='pantry_container'>
-      <div class='fruits'>
-        <div class='0'>pineapple</div>
+  <body onload="offset()">
+
+      <div class="tab">
+        <button class="tablinks" onclick="openCategory(event, 'fruits')">Fruits</button>
+        <button class="tablinks" onclick="openCategory(event, 'vegetables')">Vegetables</button>
+        <button class="tablinks" onclick="openCategory(event, 'grains')">Grains</button>
+        <button class="tablinks" onclick="openCategory(event, 'nutsandseeds')">Nuts/Seeds</button>
+        <button class="tablinks" onclick="openCategory(event, 'dairy')">Dairy</button>
+        <button class="tablinks" onclick="openCategory(event, 'fats')">Fats</button>
+        <button class="tablinks" onclick="openCategory(event, 'spices')">Spices</button>
+        <button class="tablinks" onclick="openCategory(event, 'condiments')">Condiments</button>
+        <button class="tablinks" onclick="openCategory(event, 'protein')">Protein</button>
+        <button class="tablinks" onclick="openCategory(event, 'herbs')">Herbs</button>
+        <button class="tablinks" onclick="openCategory(event, 'drinks')">Drinks</button>
+        <button class="tablinks" onclick="openCategory(event, 'snacks')">Snacks</button>
+        <button class="tablinks" onclick="openCategory(event, 'miscellaneous')">Miscellaneous</button>
       </div>
-      <div class='vegetables'>
-        <div class='0'>rice</div>
+
+      <div id='fruits' class='tabcontent'>
+        <div class='0'>Fruits</div>
       </div>
-      <div class='grains'>
-        <div class='0'>rice</div>
+      <div id='vegetables' class='tabcontent'>
+        <div class='0'>Vegetables</div>
       </div>
-      <div class='nutsandseeds'>
-        <div class='0'>rice</div>
+      <div id='grains' class='tabcontent'>
+        <div class='0'>Grains</div>
       </div>
-      <div class='dairy'>
-        <div class='0'>rice</div>
+      <div id='nutsandseeds' class='tabcontent'>
+        <div class='0'>Nuts/Seeds</div>
       </div>
-      <div class='fats'>
-        <div class='0'>rice</div>
+      <div id='dairy' class='tabcontent'>
+        <div class='0'>Dairy</div>
       </div>
-      <div class='spices'>
-        <div class='0'>rice</div>
+      <div id='fats' class='tabcontent'>
+        <div class='0'>Fats</div>
       </div>
-      <div class='condiments'>
-        <div class='0'>rice</div>
+      <div id='spices' class='tabcontent'>
+        <div class='0'>Spices</div>
       </div>
-      <div class='protein'>
-        <div class='0'>rice</div>
+      <div id='condiments' class='tabcontent'>
+        <div class='0'>Condiments</div>
       </div>
-      <div class='herbs'>
-        <div class='0'>rice</div>
+      <div id='protein' class='tabcontent'>
+        <div class='0'>Protein</div>
       </div>
-      <div class='drinks'>
-        <div class='0'>rice</div>
+      <div id='herbs' class='tabcontent'>
+        <div class='0'>Herbs</div>
       </div>
-      <div class='snacks'>
-        <div class='0'>rice</div>
+      <div id='drinks' class='tabcontent'>
+        <div class='0'>Drinks</div>
       </div>
-      <div class='miscellaneous'>
-        <div class='0'>rice</div>
+      <div id='snacks' class='tabcontent'>
+        <div class='0'>Snacks</div>
+      </div>
+      <div id='miscellaneous' class='tabcontent'>
+        <div class='0'>Miscellaneous</div>
       </div>
     <p>
     </p>
