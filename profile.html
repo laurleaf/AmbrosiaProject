@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<link rel= "stylesheet" type="text/css" media="screen" href= "ambrosiaDesign.css">
+   <script src="ambrosiaJava.js"> </script>
+
   <head>
     <meta charset="utf-8">
-    <title>Pantry</title>
-    <link rel= "stylesheet" type="text/css" media="screen" href= "DarbyDesign.css">
-  <script src="javaDesign.js"> </script>
+    <title>Ambrosia Profile</title>
+    <header>Ambrosia</header>
+
   </head>
+
+  <nav><ul>
+    <li><a href="pantry.html">Pantry</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="shoppingList.html">Shopping List</a></li>
+    <li><a class="active" href="profile.html">Profile</a></li>
+  </ul></nav>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
   <style>
 /* The container */
 .container {
@@ -78,7 +91,7 @@
 
     <h1>Allergy Restrictions</h1>
 <label class="container">Peanuts
-  <input type="checkbox" checked="checked">
+  <input type="checkbox">
   <span class="checkmark"></span>
 </label>
 <label class="container">Shellfish
@@ -86,7 +99,7 @@
   <span class="checkmark"></span>
 </label>
 <label class="container">Soybean
-  <input type="checkbox" checked="checked">
+  <input type="checkbox">
   <span class="checkmark"></span>
 </label>
 <label class="container">Tree Nuts
@@ -105,7 +118,7 @@
 
     <h1>Diet Types</h1>
 <label class="container">Vegetarian
-  <input type="checkbox" checked="checked">
+  <input type="checkbox">
   <span class="checkmark"></span>
 </label>
 <label class="container">Vegan
