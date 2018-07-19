@@ -1,0 +1,107 @@
+.pantry_container {
+  display: flex; /* or inline-flex */
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 20px
+  align-content: space-between;
+  color: #fff;
+  background-color: #ffb366;  /* Blue */
+  padding: 50px 0;
+}
+
+.fruits {
+  order: <0>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.vegetables {
+  order: <1>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.grains {
+  order: <2>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.nutsandseeds {
+  order: <3>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.dairy {
+  order: <4>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.fats {
+  order: <5>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.spices {
+  order: <6>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.condiments {
+  order: <7>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.protein {
+  order: <8>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.herbs {
+  order: <9>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.drinks {
+  order: <10>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.snacks {
+  order: <11>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+.miscellaneous {
+  order: <12>;
+  display: flex;
+  border: 1px solid #ffffff;  /* For debugging */
+  height: 500px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
