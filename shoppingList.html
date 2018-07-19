@@ -14,7 +14,7 @@
         <li><a href="profile.html">Profile</a></li>
       </ul></nav>
     </div>
-    
+
     <link rel= "stylesheet" type="text/css" media="screen" href= "ambrosiaDesign.css">
     <script src="ambrosiaJava.js" > </script>
   </head>
@@ -85,29 +85,45 @@
     </h3>
     Enter a food to add to your shopping list: <br>
     <input type="text" id="foodName">
-    <button onclick="addToShopList()"> Enter </button><br>
-    <button onclick= "loopThruShopList()">GO! </button>
+    <button onclick="addToShopList();myFunction();"> Enter </button><br>
+
 
     <ul id="myList">
 
     </ul>
 
-    <p>Click the button to append an item to the end of the list.</p>
-
-    <button onclick="myFunction()">Try it</button>
-
   <script>
+    var child
+    i = 0;
+    // k = 0;
     function myFunction() {
-      var li = document.createElement("LI");
-      li.style="list-style='none'";
-      var node = document.createElement("INPUT");
-      node.type = 'checkbox';
-      li.appendChild(node)
-      var textnode = document.createTextNode(shopList[1]);
-      li.appendChild(textnode);
-      document.getElementById("myList").appendChild(li);
+      // if (k > 1){
+      //   var parent = document.getElementById(shopList);
+      //   for (j = 0; j < shopList.length; j++){
+      //     child = document.getElementById(shopList[j]).value;
+      //     shopList.pull(child);
+      //     console.log(shopList)
+      //   }
+      // }
+      // for (i = 0; i < shopList.length; i++){
+        var li = document.createElement("LI");
+        li.style="list-style='none'";
+        var node = document.createElement("INPUT");
+        node.type = 'checkbox';
+        li.appendChild(node)
+        var textnode = document.createTextNode(shopList[i]);
+        li.appendChild(textnode);
+        document.getElementById("myList").appendChild(li);
+        i = i + 1;
+      // }
+      // k = k + 1;
+      // var parent = document.getElementById(shopList);
+      // child = document.getElementById(shopList[1]);
+      // parent.removeChild(child);
+
     }
   </script>
+
     <!-- <label class="container"> carrots
       <input type="checkbox" checked="checked">
       <span class="checkmark"></span>
