@@ -14,7 +14,11 @@ header{
   left:0;
   width:100%;
   z-index: 999;
+
   height: auto;
+
+  width: 100%;
+
 }
 
 ul {
@@ -25,8 +29,12 @@ ul {
     background-color: #ccc;
 }
 
-li {
+nav li {
     float: left;
+}
+
+#myList {
+  background-color: white;
 }
 
 li a {
@@ -51,7 +59,10 @@ li a:hover:not(.active) {
 body {
     font-family: Arial, Helvetica, sans-serif;
     z-index: 0;
-    padding-top: 12.5vw;
+
+ 
+
+    padding-top: 18vw;
 }
 
 #myBtn {
