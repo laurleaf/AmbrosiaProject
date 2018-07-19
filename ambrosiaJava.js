@@ -1,9 +1,17 @@
 
 var shopList = [];
+
 function addToShopList(){ //adds a new item from the user to the shopping list
-  currfood = document.getElementById("foodName")
-  shopList.push(currfood)
-  document.write(shopList)
+  currfood = document.getElementById("foodName").value// finds the value that the user typed
+  shopList.push(currfood); //adds the item to the list
+  console.log(shopList); //prints to the console to test the function
+}
+
+function loopThruShopList() {//loops through the shopping list and makes all of the checklist
+  for (i = 0; i < shopList.length; i++) {
+
+
+  }
 }
 
 // When the user scrolls down 20px from the top of the document, show the button
