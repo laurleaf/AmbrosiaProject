@@ -1,4 +1,4 @@
-.pantry_container {
+.tabcontent {
   display: flex; /* or inline-flex */
   flex-direction: column;
   justify-content: space-around;
@@ -9,91 +9,91 @@
   padding: 50px 0;
 }
 
-.fruits {
+#fruits {
   order: <0>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.vegetables {
+#vegetables {
   order: <1>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.grains {
+#grains {
   order: <2>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.nutsandseeds {
+#nutsandseeds {
   order: <3>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.dairy {
+#dairy {
   order: <4>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.fats {
+#fats {
   order: <5>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.spices {
+#spices {
   order: <6>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.condiments {
+#condiments {
   order: <7>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.protein {
+#protein {
   order: <8>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.herbs {
+#herbs {
   order: <9>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.drinks {
+#drinks {
   order: <10>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.snacks {
+#snacks {
   order: <11>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */
   height: 500px;
 }
 
-.miscellaneous {
+#miscellaneous {
   order: <12>;
   display: flex;
   border: 1px solid #ffffff;  /* For debugging */

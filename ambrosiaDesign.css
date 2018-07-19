@@ -3,7 +3,7 @@ header{
   background-color: #ffb366;
   padding: 30px;
   text-align: center;
-  font-size: 35px;
+  font-size: calc(30px + 1vw);
   color: black;
 }
 
@@ -14,7 +14,7 @@ header{
   left:0;
   width:100%;
   z-index: 999;
-  width: 100%;
+  height: auto;
 }
 
 ul {
@@ -51,6 +51,7 @@ li a:hover:not(.active) {
 body {
     font-family: Arial, Helvetica, sans-serif;
     z-index: 0;
+    padding-top: 12.5vw;
 }
 
 #myBtn {
@@ -66,9 +67,28 @@ body {
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
+    font-size: calc(15px + 1vw); /* Increase font size */
 }
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.tab {
+  width: 100%;
+}
+
+.tab button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1vw;
+    transition: 0.3s;
+    font-size: calc(15px + 1vw;);
+    height: auto;
+}
+
+.tabcontent {
+  clear: left;
 }
