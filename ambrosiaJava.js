@@ -1,7 +1,15 @@
-function offset() {
-  var h = document.getElementById('nav').offsetHeight;
-  document.getElementsByTagName('BODY').style.margin = h;
-}
+// $(document).ready(function() {
+//
+//     // var h = document.getElementById('nav').scrollHeight();
+//     // console.log(h);
+//     // var el1 = $( "header" );
+//     // var h1 = el1.height();
+//     // var el2 = $( "nav" );
+//     // var h2 = el2.height();
+//     // var h = h1 + h2 + 1000;
+//     // var elChange = document.getElementById("offset");
+//     // elChange.style.height=h;
+// });
 
 
 var shopList = [];
@@ -42,4 +50,14 @@ function openCategory(evt, categoryName) {
     }
     document.getElementById(categoryName).style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+function openNav() {
+    document.getElementById("tab").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("tab").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
 }

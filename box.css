@@ -4,99 +4,106 @@
   justify-content: space-around;
   margin: 20px
   align-content: space-between;
-  color: #fff;
-  background-color: #ffb366;  /* Blue */
+  color: black;
+  background-color: #ffffff;  /* Blue */
   padding: 50px 0;
 }
 
-#fruits {
+#offset {
   order: <0>;
+  display: block;
+  border: 1px solid black;  /* For debugging */
+
+}
+
+#fruits {
+  order: <1>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #vegetables {
-  order: <1>;
+  order: <2>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #grains {
-  order: <2>;
+  order: <3>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #nutsandseeds {
-  order: <3>;
+  order: <4>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #dairy {
-  order: <4>;
+  order: <5>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #fats {
-  order: <5>;
+  order: <6>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #spices {
-  order: <6>;
+  order: <7>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #condiments {
-  order: <7>;
+  order: <8>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #protein {
-  order: <8>;
+  order: <9>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #herbs {
-  order: <9>;
+  order: <10>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #drinks {
-  order: <10>;
+  order: <11>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #snacks {
-  order: <11>;
+  order: <12>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 
 #miscellaneous {
-  order: <12>;
+  order: <13>;
   display: flex;
-  border: 1px solid #ffffff;  /* For debugging */
+  border: 1px solid black;  /* For debugging */
   height: 500px;
 }
 

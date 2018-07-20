@@ -1,69 +1,97 @@
 header{
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ffb366;
-  padding: 30px;
+  background-color: WhiteSmoke;
   text-align: center;
   font-size: calc(30px + 1vw);
   color: black;
+  height: auto;
+  padding: -2vw;
+  position: sticky;
+}
+
+header img {
+  height: calc(100px + 7vh);
+}
+
+nav {
+  position: relative;
+  top: -4vh;
+  width: 100%;
+  text-align: center;
+  background-color: whiteSmoke;
+  border-bottom: 4px solid #ff665d;
 }
 
 .nav {
   overflow: hidden;
-  position: fixed;
+  position: sticky;
   top:0;
   left:0;
   width:100%;
-  z-index: 999;
-
+  z-index: 99;
   height: auto;
-
   width: 100%;
 
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #ccc;
+    background-color: WhiteSmoke;
+    position: relative;
+    display: inline-block;
+    float: center;
+    text-align: center;
 }
 
 nav li {
     float: left;
+    color: #616161;
+    font-size: calc(15px + 1vh);
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-bottom: 1vh;
 }
 
 #myList {
   background-color: white;
 }
 
-li a {
+#myList ul {
+  list-style-type: none;
+}
+
+nav li a {
     display: block;
-    color: white;
+    color: #616161;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .active {
-    background-color: #111;
-    color: white;
+    color: #ff665d;
 }
 
 li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
+    /* background-color: #555; */
+    color: #ff665d;
 }
 
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     z-index: 0;
-
- 
-
-    padding-top: 18vw;
+    /* padding-top: 18vw; */
+    padding: 0;
+    margin: 0;
+    font-family: 'Didact Gothic', sans-serif;
 }
+/* .container {
+  position: absolute;
+} */
 
 #myBtn {
     display: none; /* Hidden by default */
@@ -77,7 +105,7 @@ body {
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 8px; /* Rounded corners */
     font-size: calc(15px + 1vw); /* Increase font size */
 }
 
@@ -85,21 +113,91 @@ body {
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
+/* .tab {
+  width: 15vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+} */
+
 .tab {
-  width: 100%;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #ff665d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
+/* .tab a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+} */
+
+/* .tab a:hover {
+    color: #f1f1f1;
+} */
+
+.tab .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+
 .tab button {
-    float: left;
+    /* float: center; */
     border: none;
     outline: none;
     cursor: pointer;
     padding: 1vw;
     transition: 0.3s;
-    font-size: calc(15px + 1vw;);
+    font-size: calc(18px + 0.5vh);
     height: auto;
+    width:100%;
+    color: black;
+    background-color: #ff665d;
+}
+
+.tab button:hover {
+  color: white;
+}
+
+.content {
+    width: auto;
+    /* padding-right: -5vw; */
 }
 
 .tabcontent {
   clear: left;
+  /* width: 100%; */
+}
+
+table {
+  width: 100%;
+  /* float: center; */
+}
+
+tr {
+  text-align: left;
+}
+
+td {
+  vertical-align: top;
+  width: 5vw;
+  /* border: 1px solid black; */
 }
