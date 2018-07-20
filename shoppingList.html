@@ -8,11 +8,239 @@
     <title>Shopping List</title>
 
 
+
     <script src="ambrosiaJava.js" > </script>
   </head>
   <body>
     <div class="nav" id="nav">
       <header><img src="logoFull.png"></header>
+
+
+  <body>
+
+
+    <link rel= "stylesheet" type="text/css" media="screen" href= "ambrosiaDesign.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Raleway" rel="stylesheet">
+    <script src="ambrosiaJava.js" > </script>
+  </head>
+  <style>
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #ffb366;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+</style>
+
+<body>
+  <div class="nav" id="nav">
+    <header><img src="logoFull.png"></header>
+    <nav><ul>
+      <li><a href="pantry.html">Pantry</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a class="active" href="shoppingList.html">Shopping List</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul></nav>
+  </div>
+    <h3>
+      Shopping List:<br>
+    </h3>
+    Enter a food to add to your shopping list: <br>
+
+
+      <input type="text" id="foodName" autocomplete="off">
+      <button onclick="addToShopList();createShopList();"> Enter </button>
+      <br>
+      <ul id="myList">
+
+      </ul>
+      <br>
+      <button id= "removeAllButton" onclick="removeAll()"> Remove All </button>
+      <button id= "removeCheckedButton" onclick="moveCheckedItems()"> Remove Selected </button> <br>
+
+
+
+
+  <script>
+    var child;
+    var names;
+    var i = 0;
+    var li;
+    var check;
+
+
+    function createShopList() {
+
+     if (shopList[i].length>0) {
+        check = false;
+        var li = document.createElement("LI");
+        li.style="list-style='none'";
+        var node = document.createElement("INPUT");
+        node.type = 'button';
+        li.appendChild(node);
+        var textnode = document.createTextNode(shopList[i]);
+        li.appendChild(textnode);
+      //  li.setAttribute("class", "checkButtons")
+        // console.log(li);
+        document.getElementById("myList").appendChild(li);
+        i = i + 1;
+        console.log("if");
+        document.getElementsByClassName("checkButtons").onclick = makeItTrue(check);
+      }else {
+        shopList.splice(i, 1);
+        console.log("else");
+      }
+
+    }
+
+    function makeItTrue(bool){
+      bool = true;
+      console.log("its true")
+    }
+
+    function createShopListCheck() {
+      if (shopList[i].length> 0  ) { //|| noItemsInList = true
+        noItemsInList = false;
+        li = document.createElement("LI");
+        li.style="list-style='none'";
+        var node = document.createElement("INPUT");
+        node.type = 'checkbox';
+        li.appendChild(node)
+        var textnode = document.createTextNode(shopList[i]);
+        li.appendChild(textnode);
+        document.getElementById("myList").appendChild(li);
+        i = i + 1;
+      }else{
+        shopList.splice(i, 1);
+      }
+
+    }
+    var checkedList = [];
+    var checkingList =[];
+    function moveCheckedItems(){
+      checkingList = document.forms[0];
+      for(g = 0; g< checkingList.length; g++) {
+        if (checkingList[g].checked) {
+          checkedList.push(g);
+          console.log(g);
+        }
+      }
+      // checkedList=[];
+      // for (g = 0; g < shopList.length; g++) {
+      //   console.log("Hello");
+      //   var checkBox = document.getElementById();
+      //   console.log(checkBox);
+      //   if (checkBox.checked == true){
+      //     checkedList.push(g);
+      //     console.log(g);
+      //   }
+      // }
+      // console.log(checkedList);
+      // removeChecked();
+    }
+
+    function removeChecked(){
+      for (k = 0; k < checkedList.length; k++) {
+        var remove = document.getElementById("myList[checkedList[k]]");
+        remove.innerHTML = "";
+      }
+    }
+
+    var noItemsInList;
+    function removeAll(){
+        var remove = document.getElementById("myList");
+        remove.innerHTML = "";
+      //  shopList =[];
+      //  noItemsInList = true;
+
+    }
+  </script>
+
+  <!-- <br>
+  <button id= "removeAllButton" onclick="removeAll()"> Remove All </button>
+  <button id= "removeCheckedButton" onclick="moveCheckedItems()"> Remove Selected </button> <br> -->
+
+    <!-- <label class="container"> carrots
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">lettuce
+      <input type="checkbox" checked="checked">
+      <span class="checkmark"></span>
+    </label> -->
+
+    <!-- <input type="checkbox" name="food" value="carrot"> Carrots <br>
+    <input type="checkbox" name="food" value="broccoli" > Broccoli<br>
+   -->
+
+  </body>
+
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping List</title>
+    <div class="nav">
+      <header>Pantry</header>
+
       <nav><ul>
         <li><a href="pantry.html">Pantry</a></li>
         <li><a href="recipes.html">Recipes</a></li>
