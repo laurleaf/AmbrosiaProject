@@ -6,7 +6,7 @@
 
 
 
-  <body onload="offset()">
+  <body>
 
 
     <link rel= "stylesheet" type="text/css" media="screen" href= "ambrosiaDesign.css">
@@ -88,29 +88,62 @@
       Shopping List:<br>
     </h3>
     Enter a food to add to your shopping list: <br>
-    <input type="text" id="foodName">
-    <button onclick="addToShopList();myFunction();"> Enter </button><br>
 
 
-    <ul id="myList">
+      <input type="text" id="foodName" autocomplete="off">
+      <button onclick="addToShopList();createShopList();"> Enter </button>
+      <br>
+      <ul id="myList">
 
-    </ul>
+      </ul>
+      <br>
+      <button id= "removeAllButton" onclick="removeAll()"> Remove All </button>
+      <button id= "removeCheckedButton" onclick="moveCheckedItems()"> Remove Selected </button> <br>
+
+
+
 
   <script>
-    var child
-    i = 0;
-    // k = 0;
-    function myFunction() {
-      // if (k > 1){
-      //   var parent = document.getElementById(shopList);
-      //   for (j = 0; j < shopList.length; j++){
-      //     child = document.getElementById(shopList[j]).value;
-      //     shopList.pull(child);
-      //     console.log(shopList)
-      //   }
-      // }
-      // for (i = 0; i < shopList.length; i++){
+    var child;
+    var names;
+    var i = 0;
+    var li;
+    var check;
+
+
+    function createShopList() {
+
+     if (shopList[i].length>0) {
+        check = false;
         var li = document.createElement("LI");
+        li.style="list-style='none'";
+        var node = document.createElement("INPUT");
+        node.type = 'button';
+        li.appendChild(node);
+        var textnode = document.createTextNode(shopList[i]);
+        li.appendChild(textnode);
+      //  li.setAttribute("class", "checkButtons")
+        // console.log(li);
+        document.getElementById("myList").appendChild(li);
+        i = i + 1;
+        console.log("if");
+        document.getElementsByClassName("checkButtons").onclick = makeItTrue(check);
+      }else {
+        shopList.splice(i, 1);
+        console.log("else");
+      }
+
+    }
+
+    function makeItTrue(bool){
+      bool = true;
+      console.log("its true")
+    }
+
+    function createShopListCheck() {
+      if (shopList[i].length> 0  ) { //|| noItemsInList = true
+        noItemsInList = false;
+        li = document.createElement("LI");
         li.style="list-style='none'";
         var node = document.createElement("INPUT");
         node.type = 'checkbox';
@@ -119,14 +152,55 @@
         li.appendChild(textnode);
         document.getElementById("myList").appendChild(li);
         i = i + 1;
+      }else{
+        shopList.splice(i, 1);
+      }
+
+    }
+    var checkedList = [];
+    var checkingList =[];
+    function moveCheckedItems(){
+      checkingList = document.forms[0];
+      for(g = 0; g< checkingList.length; g++) {
+        if (checkingList[g].checked) {
+          checkedList.push(g);
+          console.log(g);
+        }
+      }
+      // checkedList=[];
+      // for (g = 0; g < shopList.length; g++) {
+      //   console.log("Hello");
+      //   var checkBox = document.getElementById();
+      //   console.log(checkBox);
+      //   if (checkBox.checked == true){
+      //     checkedList.push(g);
+      //     console.log(g);
+      //   }
       // }
-      // k = k + 1;
-      // var parent = document.getElementById(shopList);
-      // child = document.getElementById(shopList[1]);
-      // parent.removeChild(child);
+      // console.log(checkedList);
+      // removeChecked();
+    }
+
+    function removeChecked(){
+      for (k = 0; k < checkedList.length; k++) {
+        var remove = document.getElementById("myList[checkedList[k]]");
+        remove.innerHTML = "";
+      }
+    }
+
+    var noItemsInList;
+    function removeAll(){
+        var remove = document.getElementById("myList");
+        remove.innerHTML = "";
+      //  shopList =[];
+      //  noItemsInList = true;
 
     }
   </script>
+
+  <!-- <br>
+  <button id= "removeAllButton" onclick="removeAll()"> Remove All </button>
+  <button id= "removeCheckedButton" onclick="moveCheckedItems()"> Remove Selected </button> <br> -->
 
     <!-- <label class="container"> carrots
       <input type="checkbox" checked="checked">
