@@ -79,9 +79,19 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+
 }
+#allergybutton{
+  left: 10px;
+  top: 5px;
+  width: 200px;
+  height: 40px;
+
+  }
 </style>
-  <body onload="offset()">
+
+
+  <body>
     <div class="nav" id="nav">
       <header><img src="logoFull.png"></header>
       <nav><ul>
@@ -94,33 +104,37 @@
 <h2>My Profile</h2>
 
     <h1>Allergy Restrictions</h1>
-<label class="container">Peanuts
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Shellfish
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Soybean
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Tree Nuts
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Wheat
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Fish
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
+    <form>
+    <label class="container">Peanuts
+      <input type="checkbox" name="allergy" value="peanuts">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Shellfish
+      <input type="checkbox" name="allergy" value="shellfish">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Soybean
+      <input type="checkbox" name="allergy" value="soybean">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Tree Nuts
+      <input type="checkbox" name="allergy" value="treenuts">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Wheat
+      <input type="checkbox" name="allergy" value="wheat">
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Fish
+      <input type="checkbox" name="allergy" value="fish">
+      <span class="checkmark"></span>
+    </label>
+    <input type="button" id="allergybutton" onclick="restrictionAllergies()" value="Confirm allergies">
+  </form>
 
 
-    <h1>Diet Types</h1>
+    <h1>Diet Restrictions</h1>
+<form>
 <label class="container">Vegetarian
   <input type="checkbox">
   <span class="checkmark"></span>
@@ -133,20 +147,36 @@
   <input type="checkbox">
   <span class="checkmark"></span>
 </label>
-<label class="container">Atkins
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Raw Food
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Paleo
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
+</form>
     <div>
     </div>
+
+    <script>
+  // var possible_allergies = ['Peanuts', 'Shellfish', 'Soybean', 'Tree Nuts', 'Wheat', 'Fish'];
+  // var allergies = [];
+  // for (i = 0; i < possible_allergies.length; i++) {
+  //   // if document.getElementById("myCheck").checked == true
+  //   // var allergyType = possible_allergies[i];
+  //   var el = document.getElementbyId(possible_allergies[i]).checked;
+  //   console.log(el);
+  //   // if document.getElementbyId(allergyType).checked == true {
+  //   //
+  //   // }
+  // }
+
+  function restrictionAllergies() {
+      var allergies = document.forms[0];
+      var txt = "";
+      var i;
+      for (i = 0; i < allergies.length; i++) {
+          if (allergies[i].checked) {
+              txt = txt + allergies[i].value + " ";
+                console.log(txt);
+          }
+      }
+    }
+
+  </script>
   </body>
 
 </html>
