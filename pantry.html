@@ -28,6 +28,59 @@
         <li><a href="profile.html">Profile</a></li>
       </ul></nav>
     </div>
+    <div class="login">
+      <button id="loginStatus" class="loginFalse" onclick="openLogin()">Log In</button>
+      <div id="loginForm" class="animate">
+        <form class="modal-content" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="closeLogin()" class="close" title="Close Modal">&times;</span>
+            <img src="logoSmall.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="box">
+            <p>Log In</p>
+            <br></br>
+          </div>
+
+          <div class="box">
+            <input type="text" placeholder="Username" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="userName" required>
+            <br></br>
+            <input type="text" placeholder="Password" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="password" required>
+            <br></br>
+            <button type="button" onclick="submitLogin()" class="submitbtn">Submit</button>
+            <br></br>
+            <span class="psw">Forgot password?</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="signUp">
+      <button id="signUpStatus" class="signUpFalse" onclick="openSignUp()">Sign up</button>
+      <div id="signUpForm" class="animate">
+        <div class="modal-content" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="closeSignUp()" class="close" title="Close Modal">&times;</span>
+            <img src="logoSmall.png" alt="Avatar" class="avatar">
+          </div>
+
+          <div class="box">
+            <p>Sign Up</p>
+            <br></br>
+          </div>
+
+          <div class="box">
+            <input type="text" placeholder="Username" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="userName" required>
+            <br></br>
+            <input type="text" placeholder="Password" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" id="userName" required>
+            <br></br>
+            <button type="button" onclick="submitSignUp()" class="submitbtn">Submit</button>
+            <br></br>
+            <span class="psw">Forgot password?</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br></br>
     <div class="container">
       <div class="tab" id="tab">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -100,17 +153,7 @@
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script>
-  function openNav() {
-      document.getElementById("tab").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-  }
 
-  function closeNav() {
-      document.getElementById("tab").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-  }
-  </script>
   </body>
 
 </html>
