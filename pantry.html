@@ -4,6 +4,10 @@
 <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Raleway" rel="stylesheet">
 <link rel="icon" href="logoSmall.png">
    <script src="ambrosiaJava.js"> </script>
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
   <head>
     <meta charset="utf-8">
 
@@ -12,10 +16,6 @@
 
 
     <title>Ambrosia Pantry</title>
-
-
-
-
 
   </head>
   <body id="body">
@@ -28,6 +28,7 @@
         <li><a href="profile.html">Profile</a></li>
       </ul></nav>
     </div>
+
     <div class="container">
       <div class="tab" id="tab">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -45,6 +46,7 @@
         <button class="tablinks" onclick="openCategory(event, 'snacks')">Snacks</button>
         <button class="tablinks" onclick="openCategory(event, 'miscellaneous')">Miscellaneous</button>
       </div>
+ 
       &nbsp; &nbsp; &nbsp; <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;  categories</span>
       <div class="content" id="main">
 
@@ -94,11 +96,46 @@
 
       <p>
       </p>
-      <div>
+      <div data-role="main" class="ui-content">
+          <!-- <button onclick="popup" id="myPopup">Add to Pantry</button> -->
+        <!-- <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Add to Pantry</a> -->
+
+        <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+
+          <form action="/action_page.php" method="get" id="myPopup">
+            New Pantry Item: <input type="text" name="item"><br>
+            <div class="dropdown"><br>
+              Category: <button class="dropbtn">Select
+                <i class="fa fa-caret-down"></i>
+                </button>
+              <div class="dropdown-content">
+                <a href="#">Fruits</a>
+                <a href="#">Vegetables</a>
+                <a href="#">Grains</a>
+                <a href="#">Nuts/Seeds</a>
+                <a href="#">Dairy</a>
+                <a href="#">Fats</a>
+                <a href="#">Spices</a>
+                <a href="#">Condiments</a>
+                <a href="#">Protein</a>
+                <a href="#">Herbs</a>
+                <a href="#">Drinks</a>
+                <a href="#">Snacks</a>
+                <a href="#">Miscellaneous</a>
+              </div>
+          </form>
+
+
+    <button type="submit" form="nameform" value="Submit">Submit</button>
       </div>
+      </div>
+      </div>
+
+
       <div>
         <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script>
   function openNav() {
