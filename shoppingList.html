@@ -10,19 +10,19 @@
 
 
     <script src="ambrosiaJava.js" > </script>
-  </head>
-  <body>
-    <div class="nav" id="nav">
-      <header><img src="logoFull.png"></header>
+  
 
 
-  <body>
+
+
+
 
 
     <link rel= "stylesheet" type="text/css" media="screen" href= "ambrosiaDesign.css">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Raleway" rel="stylesheet">
     <script src="ambrosiaJava.js" > </script>
   </head>
+    <body>
   <style>
 /* The container */
 .container {
@@ -84,7 +84,7 @@
 }
 </style>
 
-<body>
+
   <div class="nav" id="nav">
     <header><img src="logoFull.png"></header>
     <nav><ul>
@@ -101,7 +101,7 @@
 
 
       <input type="text" id="foodName" autocomplete="off">
-      <button onclick="addToShopList();createShopList();"> Enter </button>
+      <button onclick="addToShopList();createShopListCheck();"> Enter </button>
       <br>
       <ul id="myList">
 
@@ -151,6 +151,7 @@
     }
 
     function createShopListCheck() {
+      for (p = 0; p< shopList.length)
       if (shopList[i].length> 0  ) { //|| noItemsInList = true
         noItemsInList = false;
         li = document.createElement("LI");
@@ -171,8 +172,8 @@
     var checkingList =[];
     function moveCheckedItems(){
       checkingList = document.forms[0];
-      for(g = 0; g< checkingList.length; g++) {
-        if (checkingList[g].checked) {
+      for(g = 0; g< shopList.length; g++) {
+        if (shopList[g].checked) {
           checkedList.push(g);
           console.log(g);
         }
@@ -206,6 +207,15 @@
       //  noItemsInList = true;
 
     }
+
+    var shopList = [];
+
+    function addToShopList(){ //adds a new item from the user to the shopping list
+      currfood = document.getElementById("foodName").value// finds the value that the user typed
+      shopList.push(currfood); //adds the item to the list
+      console.log(shopList); //prints to the console to test the function
+    }
+
   </script>
 
   <!-- <br>

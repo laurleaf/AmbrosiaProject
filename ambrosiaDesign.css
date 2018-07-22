@@ -134,7 +134,7 @@ nav li {
 }
 
 #myList {
-  background-color: white;
+  background-color: #FFE7D3;
   clear: left;
   text-align: left;
   padding-left: 10px;
@@ -337,4 +337,3 @@ td {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-

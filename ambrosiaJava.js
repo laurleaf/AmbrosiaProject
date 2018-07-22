@@ -3,13 +3,7 @@ function displayLogin() {
 }
 
 
-var shopList = [];
 
-function addToShopList(){ //adds a new item from the user to the shopping list
-  currfood = document.getElementById("foodName").value// finds the value that the user typed
-  shopList.push(currfood); //adds the item to the list
-  console.log(shopList); //prints to the console to test the function
-}
 
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -77,6 +71,6 @@ function closeSignUp() {
   // document.getElementById('signUpStatus').style.display='block'
 }
 
-function submitLogin() {
-  if 
-}
+// function submitLogin() {
+//   if
+// }
