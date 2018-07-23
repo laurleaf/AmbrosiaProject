@@ -2,7 +2,6 @@
 <html lang="en" dir="ltr">
 <link rel= "stylesheet" type="text/css" media="screen" href= "ambrosiaDesign.css">
 <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Raleway" rel="stylesheet">
-<link rel="icon" href="logoSmall.png">
    <script src="ambrosiaJava.js"> </script>
 
   <head>
@@ -82,7 +81,7 @@
     transform: rotate(45deg);
 }
 </style>
-  <body>
+  <body onload="offset()">
     <div class="nav" id="nav">
       <header><img src="logoFull.png"></header>
       <nav><ul>
@@ -92,57 +91,8 @@
         <li><a class="active" href="profile.html">Profile</a></li>
       </ul></nav>
     </div>
-    <div class="login">
-      <button id="loginStatus" class="loginFalse" onclick="openLogin()">Login</button>
-      <div id="loginForm" class="animate">
-        <form class="modal-content" action="/action_page.php">
-          <div class="imgcontainer">
-            <span onclick="closeLogin()" class="close" title="Close Modal">&times;</span>
-            <img src="logoSmall.png" alt="Avatar" class="avatar">
-          </div>
-
-          <div class="box">
-
-          </div>
-
-          <div class="box">
-            <input type="text" placeholder="Username" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" required>
-            <br></br>
-            <input type="text" placeholder="Password" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" required>
-            <br></br>
-            <button type="button" onclick="closeLogin()" class="cancelbtn">Cancel</button>
-            <br></br>
-            <span class="psw">Forgot password?</span>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="signUp">
-      <button id="signUpStatus" class="signUpFalse" onclick="openSignUp()">Sign up</button>
-      <div id="signUpForm" class="animate">
-        <div class="modal-content" action="/action_page.php">
-          <div class="imgcontainer">
-            <span onclick="closeSignUp()" class="close" title="Close Modal">&times;</span>
-            <img src="logoSmall.png" alt="Avatar" class="avatar">
-          </div>
-
-          <div class="box">
-
-          </div>
-
-          <div class="box">
-            <input type="text" placeholder="Username" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" required>
-            <br></br>
-            <input type="text" placeholder="Password" name="uname" style="font-family: 'Didact Gothic', sans-serif; width: 80%;" required>
-            <br></br>
-            <button type="button" onclick="closeSignUp()" class="cancelbtn">Cancel</button>
-            <br></br>
-            <span class="psw">Forgot password?</span>
-          </div>
-        </form>
-      </div>
-    </div>
 <h2>My Profile</h2>
+
     <h1>Allergy Restrictions</h1>
 <label class="container">Peanuts
   <input type="checkbox">

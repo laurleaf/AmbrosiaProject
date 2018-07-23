@@ -1,6 +1,15 @@
-function displayLogin() {
-
-}
+// $(document).ready(function() {
+//
+//     // var h = document.getElementById('nav').scrollHeight();
+//     // console.log(h);
+//     // var el1 = $( "header" );
+//     // var h1 = el1.height();
+//     // var el2 = $( "nav" );
+//     // var h2 = el2.height();
+//     // var h = h1 + h2 + 1000;
+//     // var elChange = document.getElementById("offset");
+//     // elChange.style.height=h;
+// });
 
 
 var shopList = [];
@@ -44,39 +53,11 @@ function openCategory(evt, categoryName) {
 }
 
 function openNav() {
-    document.getElementById("tab").style.width = "20vw";
-    document.getElementById("main").style.marginLeft = "20vw";
+    document.getElementById("tab").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
 }
 
 function closeNav() {
     document.getElementById("tab").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
-}
-
-function openLogin() {
-  document.getElementById('loginForm').style.height='30vw'
-  document.getElementById('loginForm').style.display='block'
-  // document.getElementById('loginStatus').style.display='none'
-}
-
-function closeLogin() {
-  document.getElementById('loginForm').style.height='0vw'
-  document.getElementById('loginForm').style.display='none'
-  // document.getElementById('loginStatus').style.display='block'
-}
-
-function openSignUp() {
-  document.getElementById('signUpForm').style.height='30vw'
-  document.getElementById('signUpForm').style.display='block'
-  // document.getElementById('signUpStatus').style.display='none'
-}
-
-function closeSignUp() {
-  document.getElementById('signUpForm').style.height='0vw'
-  document.getElementById('signUpForm').style.display='none'
-  // document.getElementById('signUpStatus').style.display='block'
-}
-
-function submitLogin() {
-  if 
 }

@@ -11,10 +11,7 @@ header{
 
 header img {
   height: calc(100px + 7vh);
-  position:inherit;
 }
-
-
 
 nav {
   position: relative;
@@ -34,7 +31,7 @@ nav {
   z-index: 99;
   height: auto;
   width: 100%;
-  max-height: 500px;
+
 }
 
 ul {
@@ -56,81 +53,6 @@ nav li {
     padding-left: 1vh;
     padding-right: 1vh;
     padding-bottom: 1vh;
-}
-
-
-
-#loginForm {
-  height: 0vw;
-  position:fixed;
-  z-index: 9000;
-  display: none;
-  background-color: whiteSmoke;
-  margin-left: 37.5vw;
-  width: 25vw;
-  border: 3px solid #ff665d;
-  overflow: hidden;
-  /* top: 2vh; */
-}
-
-#signUpForm {
-  height: 0vw;
-  position:fixed;
-  z-index: 5000;
-  display: none;
-  background-color: whiteSmoke;
-  margin-left: 37.5vw;
-  width: 25vw;
-  border: 3px solid #ff665d;
-  overflow: hidden;
-  /* top: 1vh; */
-}
-
-.modal-content {
-  text-align: center;
-  float: center;
-}
-
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #ff665d;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-
-.login {
-  position: sticky;
-}
-
-#loginStatus, #signUpStatus {
-  background-color: #ff665d;
-  color: white;
-  border: none;
-  float: right;
-  clear: right;
-  margin-bottom: 1vh;
-  position: sticky;
-  /* z-index: 99; */
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: calc(15px + 1vh);
 }
 
 #myList {
@@ -175,7 +97,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Didact Gothic', sans-serif;
-    background-color: #FFE7D3;
 }
 /* .container {
   position: absolute;
@@ -189,13 +110,12 @@ body {
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: #ff665d; /* Set a background color */
+    background-color: #ffb366; /* Set a background color */
     color: white; /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 15px; /* Some padding */
     border-radius: 8px; /* Rounded corners */
     font-size: calc(15px + 1vw); /* Increase font size */
-    font-family: 'Didact Gothic', sans-serif;
 }
 
 #myBtn:hover {
@@ -221,13 +141,25 @@ body {
     padding-top: 60px;
 }
 
+/* .tab a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+} */
+
+/* .tab a:hover {
+    color: #f1f1f1;
+} */
+
 .tab .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    color: white;
 }
 
 #main {
@@ -278,12 +210,6 @@ td {
   width: 5vw;
   /* border: 1px solid black; */
 }
-
-/* .container {
-  z-index: 2;
-  clear: left;
-} */
-
 
 /* The dropdown container */
 .dropdown {
@@ -337,4 +263,3 @@ td {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
